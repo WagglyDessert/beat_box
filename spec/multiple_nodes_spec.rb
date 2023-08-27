@@ -1,6 +1,6 @@
-#require './lib/node'
-#require './lib/linked_list'
-require './lib/multiple_nodes'
+require './lib/node'
+require './lib/linked_list'
+#require './lib/multiple_nodes'
 
 RSpec.describe LinkedList do
   it "is a LinkedList" do
