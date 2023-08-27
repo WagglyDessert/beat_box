@@ -2,7 +2,7 @@ require './lib/node'
 
 RSpec.describe Node do
   it "is a node" do
-    node =  
+    node = Node.new("plop")
     #create Node class
     expect(node).to be_a(Node)
   end

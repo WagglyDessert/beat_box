@@ -17,7 +17,7 @@ RSpec.describe LinkedList do
   it "is doop" do
     list = LinkedList.new
     list.append("doop")
-    expect(list.head.data).to eq("doop")
+    expect(list.head).to be_a(Node)
   end
 
   it "describes head data" do
