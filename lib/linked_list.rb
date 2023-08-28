@@ -55,4 +55,52 @@ class LinkedList
     end
   end
 
+  #prepend adds node to the beginning of the list
+  def prepend(value)
+    if @head == nil
+      @head = Node.new(value)
+    else
+    current_node = Node.new(value)
+    current_node.next_node = @head
+    @head = current_node
+    end
+  end
+
+  #insert method adds one or more elements at a given position in the list
+  def insert(index, value)
+    insert_node = Node.new(value)
+    if index == 0
+    prepend(insert_node)
+    else
+    current_node = @head
+    current_index = 0
+      until current_index == (index - 1)
+      current_node = current_node.next_node
+      current_index += 1
+      end
+    insert_node.next_node = current_node.next_node
+    current_node.next_node = insert_node
+    end
+  end
+
+  # find method takes two parameters, first indicates first position to return and the second specifies how many elements to return
+
+  #pop method removes last element from list and returs it
+  # #pop: remove the last node and return it
+# def pop
+#   if self.is_empty?
+#       return "This list is currently empty"
+#   else
+#       current_node = @head
+#       while current_node.next.next != nil
+#           current_node = current_node.next
+#       end
+#       last_node = current_node.next
+#       current_node.next = nil
+#   end
+#   last_node
+# end
+
+  # includes? method gives back true or false whether the supplied vallue is in the list
+
 end
