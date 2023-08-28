@@ -84,23 +84,43 @@ class LinkedList
   end
 
   # find method takes two parameters, first indicates first position to return and the second specifies how many elements to return
+  def find(index, element)
+    current_node = @head
+    current_index = 0
+    until current_index == (index)
+      current_node = current_node.next_node
+      current_index += 1
+      end
+    element_list = []
+    element.times do
+      element_list << current_node.data
+      current_node = current_node.next_node
+    end
+    element_list.join(" ")
+  end
 
-  #pop method removes last element from list and returs it
+  #pop method removes last element from list and returns it
   # #pop: remove the last node and return it
-# def pop
-#   if self.is_empty?
-#       return "This list is currently empty"
-#   else
-#       current_node = @head
-#       while current_node.next.next != nil
-#           current_node = current_node.next
-#       end
-#       last_node = current_node.next
-#       current_node.next = nil
-#   end
-#   last_node
-# end
+ def pop
+    if @head == nil
+        return "This list is currently empty"
+    else
+        current_node = @head
+        previous_node = nil
+        while current_node.next_node != nil
+            previous_node = current_node
+            current_node = current_node.next_node
+        end
+        last_node = current_node
+    end
+    previous_node.next_node = nil
+    last_node.data
+ end
 
-  # includes? method gives back true or false whether the supplied vallue is in the list
+  # includes? method gives back true or false whether the supplied value is in the list
+  def includes?(value)
+    list_array = to_string
+    list_array.include?(value)
+  end
 
 end

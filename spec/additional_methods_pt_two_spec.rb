@@ -23,7 +23,7 @@ RSpec.describe LinkedList do
     expect(list.find(2, 1)).to eq("shi")
   end
 
-  xit "can find 'woo shi shu'" do
+  it "can find 'woo shi shu'" do
     list = LinkedList.new
     list.append("shi")
     list.append("blop")
@@ -33,7 +33,7 @@ RSpec.describe LinkedList do
     expect(list.find(1, 3)).to eq("woo shi shu")
   end
 
-  xit "can find 'shi'" do
+  it "includes 'deep'" do
     list = LinkedList.new
     list.append("shi")
     list.append("blop")
@@ -43,7 +43,7 @@ RSpec.describe LinkedList do
     expect(list.includes?("deep")).to eq(true)
   end
 
-  xit "can find 'shi'" do
+  it "includes 'dep'" do
     list = LinkedList.new
     list.append("shi")
     list.append("blop")
@@ -53,7 +53,7 @@ RSpec.describe LinkedList do
     expect(list.includes?("dep")).to eq(false)
   end
 
-  xit "can pop'" do
+  it "can pop'" do
     list = LinkedList.new
     list.append("shi")
     list.append("blop")
@@ -63,7 +63,7 @@ RSpec.describe LinkedList do
     expect(list.pop).to eq("blop")
   end
 
-  xit "can pop twice" do
+  it "can pop twice" do
     list = LinkedList.new
     list.append("shi")
     list.append("blop")
@@ -74,7 +74,7 @@ RSpec.describe LinkedList do
     expect(list.pop).to eq("shu")
   end
 
-  xit "can pop'" do
+  it "can pop'" do
     list = LinkedList.new
     list.append("shi")
     list.append("blop")
