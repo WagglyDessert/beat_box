@@ -60,4 +60,18 @@ RSpec.describe LinkedList do
     expect(bb.reset_rate).to eq(500)
   end
 
+  it "can reset the sound voice" do
+    bb = BeatBox.new("deep dop dop deep")
+    bb.rate = 100
+    bb.voice = "Daniel"
+    expect(bb.reset_voice).to eq("Boing")
+  end
+
+  it "can reset rate AND voice" do
+    bb = BeatBox.new("deep dop dop deep")
+    bb.rate = 100
+    bb.voice = "Daniel"
+    expect(bb.play).to eq(`say "deep dop dop deep"`)
+  end
+
 end
