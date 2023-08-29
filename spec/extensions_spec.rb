@@ -16,4 +16,10 @@ RSpec.describe LinkedList do
     expect(bb.all).to eq("deep")
   end
 
+  it "can prepend data" do
+    bb = BeatBox.new("deep")
+    bb.prepend("tee tee tee Mississippi")
+    expect(bb.all).to eq("tee tee tee deep")
+  end
+
 end

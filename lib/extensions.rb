@@ -34,6 +34,16 @@ class BeatBox
     @list.to_string
   end
 
-  
+  def prepend(value)
+    value_array = value.split(" ")
+    approved_sounds_array = %w(tee dee deep bop boop la na doo ditt soo hoo shu shi blop plop dop oom)
+    value_array.each do |value|
+      if approved_sounds_array.include?(value)
+        @list.prepend(value)
+      else
+        @list
+      end
+    end
+  end
   #require 'pry';binding pry
 end
