@@ -51,12 +51,12 @@ class BeatBox
     end
   end
 
-  def rate(value)
-    @r = value
+  def reset_rate
+    @rate = 500
   end
 
-  def voice(value)
-    @v = value
+  def reset_voice
+    @voice = "Boing"
   end
   
 end
