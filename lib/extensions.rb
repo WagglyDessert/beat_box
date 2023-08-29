@@ -1,5 +1,6 @@
 class BeatBox
   attr_reader :list
+  attr_accessor :rate, :voice
     def initialize (data)
     @list = LinkedList.new
     append(data) #instantiates the first object as a head node
