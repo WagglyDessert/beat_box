@@ -1,15 +1,20 @@
 class BeatBox
   attr_reader :list
-    def initialize (list)
+    def initialize (data)
     @list = LinkedList.new
+    append(data) #instantiates the first object as a head node
     end
   # append method in BeatBox class acts differently (splitting the string) before passing it down to the LinkedList
+  # Add validation to your program such that the input beats must be members of your defined list. 
+  # Insertion of a beat not in the list is rejected.
   def append(value)
     value_array = value.split(" ")
+    approved_sounds_array = %w(tee dee deep bop boop la na doo ditt soo hoo shu shi blop plop dop oom)
     value_array.each do |value|
-      approved_sounds_string = [("tee dee deep bop boop la na doo ditt soo hoo shu shi blop plop dop oom")]
-    if approved_sounds_string.include?(value)
-      @list.append(value)
+      if approved_sounds_array.include?(value)
+        @list.append(value)
+      else
+        @list
     end
   end
   end
@@ -29,16 +34,6 @@ class BeatBox
     @list.to_string
   end
 
-  # Add validation to your program such that the input beats must be members of your defined list. 
-  # Insertion of a beat not in the list is rejected.
-  # def append(value)
-  #   approved_sounds_string = ("tee dee deep bop boop la na doo ditt soo hoo shu shi blop plop dop oom")
-  #   if
-  #     approved_sounds_string.include?(value)
-  #     @list.append(value)
-  #   else
-  #     @list.to_string
-  #   end
-  # end
-
+  
+  #require 'pry';binding pry
 end
