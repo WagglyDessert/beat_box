@@ -7,8 +7,11 @@ class BeatBox
   def append(value)
     value_array = value.split(" ")
     value_array.each do |value|
+      approved_sounds_string = [("tee dee deep bop boop la na doo ditt soo hoo shu shi blop plop dop oom")]
+    if approved_sounds_string.include?(value)
       @list.append(value)
     end
+  end
   end
 
   #count nodes in list
@@ -28,14 +31,14 @@ class BeatBox
 
   # Add validation to your program such that the input beats must be members of your defined list. 
   # Insertion of a beat not in the list is rejected.
-  def append(value)
-    approved_sounds_string = ("tee dee deep bop boop la na doo ditt soo hoo shu shi blop plop dop oom")
-    if
-      approved_sounds_string.include?(value)
-      @list.append(value)
-    else
-      @list.to_string
-    end
-  end
+  # def append(value)
+  #   approved_sounds_string = ("tee dee deep bop boop la na doo ditt soo hoo shu shi blop plop dop oom")
+  #   if
+  #     approved_sounds_string.include?(value)
+  #     @list.append(value)
+  #   else
+  #     @list.to_string
+  #   end
+  # end
 
 end
