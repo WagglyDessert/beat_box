@@ -7,6 +7,7 @@ RSpec.describe LinkedList do
   it "is a bb" do
     bb = BeatBox.new("deep")
     expect(bb).to be_a(BeatBox)
+    expect(bb.list.head.data).to eq("deep")
   end
 
   it "can append data" do
