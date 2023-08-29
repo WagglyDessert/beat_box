@@ -22,4 +22,9 @@ RSpec.describe LinkedList do
     expect(bb.all).to eq("tee tee tee deep")
   end
 
+  it "can play sounds" do
+    bb = BeatBox.new("deep dop dop deep")
+    expect(bb.play).to eq(`say "deep dop dop deep"`)
+  end
+
 end
