@@ -51,13 +51,13 @@ class BeatBox
     end
   end
 
-  # def rate(value)
-  #   @r = value
-  # end
+  def rate(value)
+    @r = value
+  end
 
-  # def voice(value)
-  #   @v = value
-  # end
+  def voice(value)
+    @v = value
+  end
   
 end
 
