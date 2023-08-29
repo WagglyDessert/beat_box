@@ -3,7 +3,11 @@ class BeatBox
     def initialize (data)
     @list = LinkedList.new
     append(data) #instantiates the first object as a head node
-    end
+    @rate = 500
+    @voice = "Boing"
+  end
+
+
   # append method in BeatBox class acts differently (splitting the string) before passing it down to the LinkedList
   # Add validation to your program such that the input beats must be members of your defined list. 
   # Insertion of a beat not in the list is rejected.
@@ -27,7 +31,7 @@ class BeatBox
   #generate the string content of the beat and use it as input to the 'say' command
   def play
     beats = @list.to_string
-    `say -r 500 -v Boing #{beats}`
+    `say -r #{@rate.to_s} -v #{@voice.to_s} #{beats}`
   end
 
   def all
@@ -45,5 +49,15 @@ class BeatBox
       end
     end
   end
-  #require 'pry';binding pry
+
+  # def rate(value)
+  #   @r = value
+  # end
+
+  # def voice(value)
+  #   @v = value
+  # end
+  
 end
+
+#require 'pry';binding pry
